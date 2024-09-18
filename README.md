@@ -1,51 +1,49 @@
-# Little Shop | Group Project | Frontend Starter Repo
-
-This Little Shop FE Group Project Boilerplate is built to consume and display the data from the BE Rails API built in the Mod 2 Group Project.  
-
-Your group will pull down and continue building out your own version of this front end application.
-
-## Set Up Instructions
-
-**Note:** Do **not** clone this repo into your backend repo. Put it somewhere else as a stand alone. The BE and FE repos will remain two separate repos and you will submit the links to each.  
-
-1. Fork repo
-1. Clone forked repo and rename it `git clone <repo> <new name>` (Do not clone this into your BE repo. See note above.)
-1. `cd` into cloned repo
-1. Run `npm install`
-1. Run `npm run dev` to start developing.
-  1. You'll see in the terminal that the project has opened at "http://localhost:5173/"
-
-
-## Notes
-
-This FE application is build to consume the data from your Rails API.  In order for it to work, you must have your Rails API running on localhost:3000. You will see fetch errors when running the FE without the BE API up and running.  
-
-Follow the directions in the FE requirements portion of the Little Shop group project spec. When you are finished with the FE work, update this README to remove the current content and follow the template below.  
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# Hang in There  
+# Little Shop 
 
 ### Abstract:
-(Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+- Little shop is an e-commerce web site designed to host merchants with items for sale. This site allows for displaying merchants, displaying items for sale, and displaying any given merchant's items. We can also use the site to add new merchants to our merchant list.
 
 ### Installation Instructions:
-(What steps does a person have to take to get your app cloned down and running?)
+- Fork this repo, as well as our [BackEnd Repo](https://github.com/Sgalvin36/little_shop)
+- `cd` into BE repo in terminal
+- Install all gem dependencies by typing `bundle install` in the terminal
+- Initialize database by typing `rails db:{drop, create, migrate, seed}`, followed by `rails db:schema:dump` in the terminal
+- Begin API by typing `rails s` in the terminal
+- `cd` into FE repo in terminal
+- Run `npm install` in terminal
+- Run `npm run dev` to start vite.
+- Project has opened at "http://localhost:5173/"
+
 
 ### Preview of App:
-(Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
+![](/littleShopDemo.gif)
 
 ### Context:
 (Give some context for the project here. How long did you have to work on it? What specific work/improvements did you contribute to this FE application?)
-
+- We spend a majority of our time on the backend with this project. We started working on the front end towards the end of our work time, and we worked approximatley 12 hours. We improved the front end logic by utilizing Javascript iterators, styled the page to include custom images, colors, and micro animations, and we included data validation for editing merchants.
 ### Contributors:
-(Who worked on this application? Link to your GitHub. Consider also providing LinkedIn link)
+- [Shane Galvin](http://github.com/Sgalvin36)
+- [Kyle Delaney](https://github.com/kylomite)
+- [Joel Davalos](http://github.com/jdavalos98)
+- [Kaelin Salazar](https://github.com/kaelinpsalazar)
 
 ### Learning Goals:
-(What were the learning goals of this project? What tech did you work with?)
+- Learning Goals:
+  - We gained experience with error handling in several different contexts.
+  - We learned about the communication between the front and back ends when building a full stack project.
+  - We navigated one to many relationships present in our database.
+- Tech/Tools:
+  - We used Ruby on Rails to develope our backend API.
+  - We used the Factory-bot, Faker, SimpleCov, Rspec, ShouldaMatchers and Rack-Cors gems for our development process.
+  - We used Postman to test our endpoints for HAPPY and SAD paths.
+  - We used Github Projects to manage our progress and developement.
+  - We used dbDiagram to visualize our database relationships.
+
 
 ### Wins + Challenges:
-(What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- Wins:
+  - We navigated a project with complex needs requiring coordination, and communication. By utilizing these skills we were able to work efficiently, without interfering with each other's work.
+  - We worked effectively through different avenues of development including, driver-navigator, mob-coding, and independent coding all while remaining aware of our work's impact on our groupmates, and vise-versa.
+  - We were able to implement tech and tools that required independent research for proper usage.
+- Challenges:
+  - We faced a developement setback over the weekend, where half of our team was unavailable to work for a significant amount of time due to sickness, and prior commitments. We were able to stay on track with our progress due to clear communication of expectations moving forward and the willingness of all parties to contribute based on their ability.

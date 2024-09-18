@@ -103,7 +103,6 @@ form {
 }
 
 .merchant {
-  /* height: 250px; */
   display: flex;
 }
 .item > p {
@@ -142,7 +141,6 @@ form {
 }
 
 .view-merchant-items {
-  display: block;
   margin: 0px 10px;
 }
 .edit-merchant.icon, .delete-merchant.icon {
