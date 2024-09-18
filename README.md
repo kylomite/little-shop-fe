@@ -2,6 +2,7 @@
 
 ### Abstract:
 (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+- Little shop is a web page 
 
 ### Installation Instructions:
 - Fork this repo, as well as our [BackEnd Repo](https://github.com/Sgalvin36/little_shop)
