@@ -89,15 +89,19 @@ function submitMerchantEdits(event) {
   const editInput = article.querySelector(".edit-merchant-input")
   const id = article.id.split('-')[1]
 
-  const patchBody = { name: editInput.value }
-  editData(`merchants/${id}`, patchBody)
-    .then(patchResponse => {
-      let merchantToUpdate = findMerchant(patchResponse.data.id)
-      let indexOfMerchant = merchants.indexOf(merchantToUpdate)
-      merchants.splice(indexOfMerchant, 1, patchResponse.data)
-      displayMerchants(merchants)
-      showStatus('Success! Merchant updated!', true)
-    })
+  if (!editInput.value === ""){
+    const patchBody = { name: editInput.value }
+    editData(`merchants/${id}`, patchBody)
+      .then(patchResponse => {
+        let merchantToUpdate = findMerchant(patchResponse.data.id)
+        let indexOfMerchant = merchants.indexOf(merchantToUpdate)
+        merchants.splice(indexOfMerchant, 1, patchResponse.data)
+        displayMerchants(merchants)
+        showStatus('Success! Merchant updated!', true)
+      })
+  } else {
+    showStatus("No Name was provided", false)
+  }
 }
 
 function discardMerchantEdits(event) {
@@ -113,6 +117,7 @@ function discardMerchantEdits(event) {
 function submitMerchant(event) {
   event.preventDefault()
   var merchantName = newMerchantName.value
+  if (!newMerchantName.value === "") {
   postData('merchants', { name: merchantName })
     .then(postedMerchant => {
       merchants.push(postedMerchant.data)
@@ -121,6 +126,9 @@ function submitMerchant(event) {
       showStatus('Success! Merchant added!', true)
       hide([merchantForm]) 
     })
+  } else {
+    showStatus("No Name was provided", false)
+  }
 }
 
 // Functions that control the view 
