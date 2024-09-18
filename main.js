@@ -89,7 +89,9 @@ function submitMerchantEdits(event) {
   const editInput = article.querySelector(".edit-merchant-input")
   const id = article.id.split('-')[1]
 
-  if (!editInput.value === ""){
+  if (editInput.value === ""){
+    showStatus("No Name was provided", false)
+  } else {
     const patchBody = { name: editInput.value }
     editData(`merchants/${id}`, patchBody)
       .then(patchResponse => {
@@ -98,9 +100,7 @@ function submitMerchantEdits(event) {
         merchants.splice(indexOfMerchant, 1, patchResponse.data)
         displayMerchants(merchants)
         showStatus('Success! Merchant updated!', true)
-      })
-  } else {
-    showStatus("No Name was provided", false)
+    })
   }
 }
 
@@ -117,7 +117,9 @@ function discardMerchantEdits(event) {
 function submitMerchant(event) {
   event.preventDefault()
   var merchantName = newMerchantName.value
-  if (!newMerchantName.value === "") {
+  if (merchantName === "") {
+    showStatus("No Name was provided", false)
+  } else {
   postData('merchants', { name: merchantName })
     .then(postedMerchant => {
       merchants.push(postedMerchant.data)
@@ -126,9 +128,7 @@ function submitMerchant(event) {
       showStatus('Success! Merchant added!', true)
       hide([merchantForm]) 
     })
-  } else {
-    showStatus("No Name was provided", false)
-  }
+  } 
 }
 
 // Functions that control the view 
