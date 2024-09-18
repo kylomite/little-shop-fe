@@ -5,10 +5,14 @@
 
 ### Installation Instructions:
 - Fork this repo, as well as our [BackEnd Repo](https://github.com/Sgalvin36/little_shop)
-- `cd` into BE repo
+- `cd` into BE repo in terminal
 - Install all gem dependencies by typing `bundle install` in the terminal
 - Initiliaze database by typing `rails db:{drop, create, migrate, seed}`, followed by `rails db:schema:dump` in the terminal
 - Begin API by typing `rails s` in the terminal
+- `cd` into FE repo in terminal
+- Run `npm install` in terminal
+- Run `npm run dev` to start vite.
+- Project has opened at "http://localhost:5173/"
 
 ### Preview of App:
 (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
