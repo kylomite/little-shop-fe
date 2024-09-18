@@ -89,15 +89,19 @@ function submitMerchantEdits(event) {
   const editInput = article.querySelector(".edit-merchant-input")
   const id = article.id.split('-')[1]
 
-  const patchBody = { name: editInput.value }
-  editData(`merchants/${id}`, patchBody)
-    .then(patchResponse => {
-      let merchantToUpdate = findMerchant(patchResponse.data.id)
-      let indexOfMerchant = merchants.indexOf(merchantToUpdate)
-      merchants.splice(indexOfMerchant, 1, patchResponse.data)
-      displayMerchants(merchants)
-      showStatus('Success! Merchant updated!', true)
-    })
+  if (!editInput.value === ""){
+    const patchBody = { name: editInput.value }
+    editData(`merchants/${id}`, patchBody)
+      .then(patchResponse => {
+        let merchantToUpdate = findMerchant(patchResponse.data.id)
+        let indexOfMerchant = merchants.indexOf(merchantToUpdate)
+        merchants.splice(indexOfMerchant, 1, patchResponse.data)
+        displayMerchants(merchants)
+        showStatus('Success! Merchant updated!', true)
+      })
+  } else {
+    showStatus("No Name was provided", false)
+  }
 }
 
 function discardMerchantEdits(event) {
