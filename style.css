@@ -106,7 +106,6 @@ form {
   /* height: 250px; */
   display: flex;
 }
-
 .item > p {
   margin: 3px; 
   color: #e9e7e7; 
@@ -117,6 +116,15 @@ form {
   flex-shrink: 1; 
   max-height: 40%;
   transition: color, font-size 0.2s ease-in-out; 
+}
+
+.merchant {
+  width: 220px;
+  height: 220px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .view-items-button {
@@ -130,11 +138,11 @@ form {
   padding-left: 10px;
   margin: 5px 25px;
   justify-content: center;
-  transition: color, font-size 0.2s ease-in-out
-  
+  transition: color, font-size 0.2s ease-in-out 
 }
 
 .view-merchant-items {
+  display: block;
   margin: 0px 10px;
 }
 .edit-merchant.icon, .delete-merchant.icon {
