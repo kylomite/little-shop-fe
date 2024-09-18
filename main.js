@@ -117,6 +117,7 @@ function discardMerchantEdits(event) {
 function submitMerchant(event) {
   event.preventDefault()
   var merchantName = newMerchantName.value
+  if (!newMerchantName.value === "") {
   postData('merchants', { name: merchantName })
     .then(postedMerchant => {
       merchants.push(postedMerchant.data)
@@ -125,6 +126,9 @@ function submitMerchant(event) {
       showStatus('Success! Merchant added!', true)
       hide([merchantForm]) 
     })
+  } else {
+    showStatus("No Name was provided", false)
+  }
 }
 
 // Functions that control the view 
